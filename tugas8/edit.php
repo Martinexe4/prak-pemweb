@@ -15,9 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nim = $_POST['nim'];
     $jurusan = $_POST['jurusan'];
 
+
     $query = "UPDATE students SET nama='$nama', nim='$nim', jurusan='$jurusan' WHERE id=$id";
     $result = $koneksi->query($query);
-
+      
     if ($result) {
         header('Location: index.php');
         exit;

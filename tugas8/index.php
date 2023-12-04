@@ -1,10 +1,16 @@
+<!--
+Martin Ompusunggu
+121140144
+Pemweb RC
+-->
+
 <?php
 include 'koneksi.php';
 
 $query = "SELECT * FROM students";
 $result = $koneksi->query($query);
 ?>
-
+<!--Disini untuk mengambil semua kolom yang ada di database-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +44,7 @@ $result = $koneksi->query($query);
                     <a href='hapus.php?id={$row['id']}'>Hapus</a>
                 </td>
               </tr>";
+      //melakukan perulangan supaya kolom selalu terupdate ketika terdapat data baru
     }
     ?>
 </table>

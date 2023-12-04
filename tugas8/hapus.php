@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $query = "DELETE FROM students WHERE id=$id";
     $result = $koneksi->query($query);
-
+      //mengambil id, untuk menghapus data
     if ($result) {
         header('Location: index.php');
         exit;
